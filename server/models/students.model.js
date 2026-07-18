@@ -31,10 +31,11 @@ const StudentsSchema = new Schema(
       required: true,
       default: "https://i.imgur.com/r8bo8u7.png ",
     },
-    // cohort: {
-    //   // type: {Schema.Type.ObjectId, "cohorts"},
-    //   required: true,
-    // },
+    cohort: {
+      type: Schema.Types.ObjectId,
+      ref: "cohort",
+      required: true,
+    },
     projects: {
       type: [],
       required: true,
